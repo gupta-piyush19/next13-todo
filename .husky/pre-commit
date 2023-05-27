@@ -14,3 +14,11 @@ yarn lint ||
 
 echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
 
+yarn lint-staged 
+
+yarn prettier --write . || (
+    echo '🔨❌ Yoo, you have a problem in your code. Check linter 🔨❌
+          Run yarn lint, add changes and try commit again.';
+    false;
+)
+
